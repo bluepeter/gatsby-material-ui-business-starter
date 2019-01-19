@@ -7,28 +7,32 @@ import IconButton from "@material-ui/core/IconButton";
 import { DotsVertical } from "mdi-material-ui";
 
 class MenuMobile extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      menuActive: false,
-    };
-  }
+  state = {
+    anchorEl: null,
+  };
 
-  toggleMenu = menuActive => {
-    this.setState(prevState => ({
-      menuActive: !prevState.menuActive,
-    }));
+  handleOpen = event => {
+    this.setState({ anchorEl: event.currentTarget });
+  };
+
+  handleClose = () => {
+    this.setState({ anchorEl: null });
   };
 
   render() {
-    const { menuLinks } = this.props.data.site.siteMetadata;
+    const { anchorEl } = this.state,
+      { menuLinks } = this.props.data.site.siteMetadata;
     return (
       <>
-        <IconButton onClick={this.toggleMenu}>
+        <IconButton onClick={this.handleOpen}>
           <DotsVertical style={{ color: "#efefef" }} />
         </IconButton>
-        <ClickAwayListener onClickAway={this.toggleMenu}>
-          <Menu open={this.state.menuActive} onClose={this.toggleMenu}>
+        <ClickAwayListener onClickAway={this.handleClose}>
+          <Menu
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            onClose={this.handleClose}
+          >
             {menuLinks.map(link => (
               <Link key={link.name} to={link.link}>
                 <MenuItem>{link.name}</MenuItem>

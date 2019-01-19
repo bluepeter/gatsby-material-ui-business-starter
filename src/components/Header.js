@@ -46,13 +46,12 @@ const Header = props => {
                 <Menu />
               </Typography>
             </Hidden>
+            <Hidden mdUp>
+              <MenuMobile />
+            </Hidden>
           </Grid>
         </Grid>
-        <Grid item>
-          <Hidden mdUp>
-            <MenuMobile />
-          </Hidden>
-        </Grid>
+        <Grid item />
       </Toolbar>
     </AppBar>
   );
