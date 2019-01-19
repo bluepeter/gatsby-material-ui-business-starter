@@ -22,6 +22,7 @@ module.exports = {
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-stylus",
+    "gatsby-plugin-remove-serviceworker",
     {
       resolve: "gatsby-source-filesystem",
       options: {
