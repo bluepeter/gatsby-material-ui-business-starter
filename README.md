@@ -1,5 +1,7 @@
 # Gatsby Material UI Business Starter
 
+_[Check out the demo](https://bluepeter.github.io/gatsby-material-ui-business-starter/)_
+
 Stripped-down Gatsby small business starter that uses the well-maintained and
 beautiful [Material UI](https://material-ui.com/) React.js project.
 
