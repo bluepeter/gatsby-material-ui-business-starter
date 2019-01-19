@@ -1,5 +1,5 @@
 ---
-path: "/team/dolly-burperlous"
+path: "/static/team/dolly-burperlous"
 title: "Dolly Burperlous"
 date: 2018-11-19T10:47:58+10:00
 draft: false

@@ -1,5 +1,5 @@
 ---
-path: "/team/george-geppetto"
+path: "/static/team/george-geppetto"
 title: "George Geppetto"
 date: 2018-11-19T10:47:58+10:00
 draft: false

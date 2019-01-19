@@ -1,5 +1,5 @@
 ---
-path: "/products/bug"
+path: "/static/products/bug"
 title: "Bumbling Bug"
 date: 2018-11-18T12:33:46+10:00
 image: "/products/mink-mingle-424587-unsplash.jpg"
