@@ -1,6 +1,7 @@
 ---
 path: "/products/camera"
 title: "Curious Camera"
+date: 2018-11-18T12:33:46+10:00
 image: "products/pavel-fertikh-113220-unsplash.jpg"
 ---
 

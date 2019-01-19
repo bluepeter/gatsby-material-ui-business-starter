@@ -1,6 +1,7 @@
 ---
 path: "/products/headphones"
 title: "Hallucinogenic Headphones"
+date: 2018-11-18T12:33:46+10:00
 image: "products/malte-wingen-381988-unsplash.jpg"
 ---
 

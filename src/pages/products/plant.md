@@ -1,6 +1,7 @@
 ---
 path: "/products/plant"
 title: "Petrochemical Plant"
+date: 2018-11-18T12:33:46+10:00
 image: "products/galina-n-200668-unsplash.jpg"
 ---
 
