@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticQuery, Link,graphql } from "gatsby";
+import { StaticQuery, Link, graphql } from "gatsby";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
@@ -34,6 +34,13 @@ class MenuMobile extends React.Component {
                 <MenuItem>{link.name}</MenuItem>
               </Link>
             ))}
+            <a
+              href="https://github.com/bluepeter/gatsby-material-ui-business-starter"
+              target="_blank"
+              rel="noopener"
+            >
+              <MenuItem>Fork me on Github</MenuItem>
+            </a>
           </Menu>
         </ClickAwayListener>
       </>

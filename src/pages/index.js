@@ -1,14 +1,13 @@
 import React from "react";
-import { graphql, withPrefix, Link } from "gatsby";
+import { graphql, Link } from "gatsby";
 import SEO from "../components/SEO";
 import Card from "../components/Card";
 import Page from "../components/Page";
 import Button from "@material-ui/core/Button";
 import Carousel from "../components/Carousel";
-import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
-import { Gift, Rocket } from "mdi-material-ui";
+import { Gift } from "mdi-material-ui";
 
 const Home = props => {
   const markdown = props.data.allMarkdownRemark.edges;
