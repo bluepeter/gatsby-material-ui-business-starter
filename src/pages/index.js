@@ -11,8 +11,7 @@ import Avatar from "@material-ui/core/Avatar";
 import { Gift, Rocket } from "mdi-material-ui";
 
 const Home = props => {
-  const markdown = props.data.allMarkdownRemark.edges,
-    json = props.data.allFeaturesJson.edges;
+  const markdown = props.data.allMarkdownRemark.edges;
   return (
     <Page title="Gatsby Material UI Business Starter">
       <SEO title="Home">
@@ -28,7 +27,7 @@ const Home = props => {
         alignItems="flex-start"
         justify="center"
       >
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={10}>
           <Card
             title="Our Products"
             avatar={
@@ -45,25 +44,6 @@ const Home = props => {
             }
           >
             <Carousel items={markdown} />
-          </Card>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Card
-            title="Features"
-            avatar={
-              <Avatar>
-                <Rocket />
-              </Avatar>
-            }
-          >
-            {json.map(edge => (
-              <div key={edge.node.id}>
-                <Typography variant="h5" component="h5">
-                  {edge.node.title}
-                </Typography>
-                {edge.node.description}
-              </div>
-            ))}
           </Card>
         </Grid>
       </Grid>
@@ -87,15 +67,6 @@ export const query = graphql`
             image
           }
           excerpt
-        }
-      }
-    }
-    allFeaturesJson {
-      edges {
-        node {
-          id
-          title
-          description
         }
       }
     }

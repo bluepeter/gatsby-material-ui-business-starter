@@ -12,7 +12,7 @@ const Detail = ({ data }) => {
   return (
     <Page>
       <SEO title={title} />
-      <Paper>
+      <Paper style={{ padding: "25px" }}>
         <Grid
           spacing={24}
           container

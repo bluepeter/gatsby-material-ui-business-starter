@@ -18,7 +18,6 @@ module.exports = {
     ],
   },
   plugins: [
-    "gatsby-transformer-json",
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-stylus",
@@ -28,13 +27,6 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: "pages",
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src`,
-        name: "data",
       },
     },
   ],
