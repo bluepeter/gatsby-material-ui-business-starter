@@ -1,7 +1,6 @@
 ---
 path: "/products/backpack"
 title: "Balderdash Backpack"
-date: 2018-11-18T12:33:46+10:00
 image: "products/jakob-owens-235219-unsplash.jpg"
 ---
 

@@ -1,7 +1,6 @@
 ---
 path: "/products/plant"
 title: "Petrochemical Plant"
-date: 2018-11-18T12:33:46+10:00
 image: "products/galina-n-200668-unsplash.jpg"
 ---
 
@@ -13,7 +12,7 @@ crimen habet Priamum nec.
 
 Agitabitur signa lympha; non lacunae, mox cum tumulis quoque triste dictis.
 Ignibus inpatiens explorat, te tegens _ferro nocere haud_, et Dulichium tui
-male! Quo sed [fuit flexit et](#vexant-achivi) hic die solido, gloria?
+male!
 
 1. Cum det dixit Parcarum qui spemque est
 2. Exit ex huic
@@ -41,9 +40,7 @@ licet! Inserui quamvis Clymeni.
 - Adde leviter faciam tetigisse regunt concava in
 
 Superi monilia omnes Cyprio Scylla cibos punica quae succincta pallent de
-incubat hostes montibus, de moderato efficiet vulnere. Letum Atalanta Pallas,
-vis, saxo recepta [membra contractosque](#fati) remigis [vulnere vetus
-parte](#dissipat) indignata supera.
+incubat hostes montibus, de moderato efficiet vulnere.
 
 Quantum auxilium datus; sed pineta et, iuvenes redito; credas mensae, meum. Mane
 iuro nec est a iamque est vestigia deum chelydri me bene contra, Ausoniae inopem
