@@ -1,7 +1,7 @@
 {
   "name": "gatsby-material-ui-business-starter",
   "version": "1.0.0",
-  "author": "Peter Bray <petertheyeti@gmail.com>",
+  "author": "Peter Bray <peter@foxandgeese.com>",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",

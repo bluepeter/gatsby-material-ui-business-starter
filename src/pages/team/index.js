@@ -68,8 +68,6 @@ export const query = graphql`
             path
             image
             jobtitle
-            linkedinurl
-            email
           }
         }
       }
