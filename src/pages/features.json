@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Beautiful Material UI",
+    "description": "We use the most up-to-date Material UI library.",
+    "image": "/features/noun_branding_1885335.svg"
+  },
+  {
+    "title": "Stylus",
+    "description": "Get your CSS on with dead easy theming and styles.",
+    "image": "/features/noun_The Process_1885341.svg"
+  },
+  {
+    "title": "Tiny code",
+    "description": "We provide core examples, and let you do the rest.",
+    "image": "/features/noun_3d modeling_1885342.svg"
+  }
+]
