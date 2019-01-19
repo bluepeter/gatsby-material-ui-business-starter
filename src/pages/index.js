@@ -5,6 +5,7 @@ import Card from "../components/Card";
 import Page from "../components/Page";
 import Button from "@material-ui/core/Button";
 import Carousel from "../components/Carousel";
+import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import { Gift, Rocket } from "mdi-material-ui";
@@ -57,10 +58,9 @@ const Home = props => {
           >
             {json.map(edge => (
               <div key={edge.node.id}>
-                {edge.node.image && (
-                  <img src={withPrefix(edge.node.image)} alt="" />
-                )}
-                <h3>{edge.node.title}</h3>
+                <Typography variant="h5" component="h5">
+                  {edge.node.title}
+                </Typography>
                 {edge.node.description}
               </div>
             ))}
@@ -96,7 +96,6 @@ export const query = graphql`
           id
           title
           description
-          image
         }
       }
     }

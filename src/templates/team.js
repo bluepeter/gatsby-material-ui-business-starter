@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, withPrefix } from "gatsby";
 import SEO from "../components/SEO";
 import Page from "../components/Page";
 import Grid from "@material-ui/core/Grid";
@@ -21,7 +21,7 @@ const Detail = ({ data }) => {
           justify="center"
         >
           <Grid item xs={12} md={4}>
-            <img style={{ width: "100%" }} image={image} alt="" />
+            <img style={{ width: "100%" }} src={withPrefix(image)} alt="" />
           </Grid>
           <Grid item xs={12} md={8}>
             <Typography gutterBottom variant="h2" component="h2">

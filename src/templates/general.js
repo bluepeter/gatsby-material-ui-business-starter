@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, withPrefix } from "gatsby";
 import SEO from "../components/SEO";
 import Page from "../components/Page";
 import Card from "@material-ui/core/Card";
@@ -14,7 +14,7 @@ const Detail = ({ data }) => {
     <Page>
       <SEO title={title} />
       <Card>
-        <CardMedia style={{ height: "200px" }} image={image} />
+        <CardMedia style={{ height: "200px" }} image={withPrefix(image)} />
         <CardContent>
           <Typography gutterBottom variant="h2" component="h2">
             {title}

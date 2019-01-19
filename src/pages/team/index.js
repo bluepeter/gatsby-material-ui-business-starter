@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { Link, graphql, withPrefix } from "gatsby";
 import Typography from "@material-ui/core/Typography";
 import SEO from "../../components/SEO";
 import Page from "../../components/Page";
@@ -13,6 +13,7 @@ const Team = props => {
   const teams = props.data.allMarkdownRemark.edges;
   return (
     <Page title="Meet the Team">
+      <SEO title="Meet the Team" />
       <Typography paragraph>
         We are here to help! Let us know what we can do. And we're of course
         always interested to find new recruits to join our amazing team. We are
@@ -30,9 +31,9 @@ const Team = props => {
             },
           } = edge;
           return (
-            <Link to={path}>
-              <GridListTile key={path} cols={1}>
-                <img src={image} alt={title} />
+            <Link key={path} to={path}>
+              <GridListTile cols={1}>
+                <img src={withPrefix(image)} alt={title} />
                 <GridListTileBar
                   title={title}
                   subtitle={jobtitle}

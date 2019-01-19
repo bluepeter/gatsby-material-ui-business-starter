@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { Link, graphql, withPrefix } from "gatsby";
 import SEO from "../../components/SEO";
 import Typography from "@material-ui/core/Typography";
 import Page from "../../components/Page";
@@ -30,7 +30,10 @@ const Products = props => {
           return (
             <Grid item xs={12} md={6} key={path}>
               <Card>
-                <CardMedia style={{ height: "200px" }} image={image} />
+                <CardMedia
+                  style={{ height: "200px" }}
+                  image={withPrefix(image)}
+                />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
                     <Link to={path}>{title}</Link>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { withPrefix, Link } from "gatsby";
 import MobileStepper from "@material-ui/core/MobileStepper";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -58,7 +58,10 @@ class Carousel extends React.Component {
                 <div key={index}>
                   {Math.abs(activeStep - index) <= 2 ? (
                     <Card>
-                      <CardMedia style={{ height: "200px" }} image={image} />
+                      <CardMedia
+                        style={{ height: "200px" }}
+                        image={withPrefix(image)}
+                      />
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">
                           <Link to={path}>{title}</Link>
