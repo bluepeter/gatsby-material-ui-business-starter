@@ -35,7 +35,7 @@ const styles = theme => ({
           alignItems="flex-start"
           justify="center"
         >
-          <Grid item xs={12} md={10}>
+          <Grid item xs={12} md={10} className={props.classes.root}>
             <Card
               title="Our Products"
               avatar={
