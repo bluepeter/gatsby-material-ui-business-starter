@@ -11,14 +11,12 @@ function replaceRenderer({
   setHeadComponents,
 }) {
   // Get the context of the page to collected side effects.
-  const muiPageContext = getPageContext();
-  console.log("ssr");
-
-  const bodyHTML = renderToString(
-    <JssProvider registry={muiPageContext.sheetsRegistry}>
-      {bodyComponent}
-    </JssProvider>
-  );
+  const muiPageContext = getPageContext(),
+    bodyHTML = renderToString(
+      <JssProvider registry={muiPageContext.sheetsRegistry}>
+        {bodyComponent}
+      </JssProvider>
+    );
 
   replaceBodyHTMLString(bodyHTML);
   setHeadComponents([

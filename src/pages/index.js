@@ -11,6 +11,7 @@ import Avatar from "@material-ui/core/Avatar";
 import { Gift } from "mdi-material-ui";
 import { withStyles } from "@material-ui/core/styles";
 import withRoot from "../utils/withRoot";
+import Hidden from "@material-ui/core/Hidden";
 
 const styles = theme => ({
     root: {
@@ -21,45 +22,47 @@ const styles = theme => ({
   Home = props => {
     const markdown = props.data.allMarkdownRemark.edges;
     return (
-      <Page title="Gatsby Material UI Business Starter">
-        <SEO title="Home">
-          <meta
-            name="description"
-            content="Beautiful Gatsby Material UI Business Starter. Tiny code. Well organized. Ready to customize and go."
-          />
-        </SEO>
-        <Grid
-          spacing={24}
-          container
-          direction="row"
-          alignItems="flex-start"
-          justify="center"
-        >
-          <Grid item xs={12} md={10} className={props.classes.root}>
-            <Card
-              title="Our Products"
-              avatar={
-                <Avatar>
-                  <Gift />
-                </Avatar>
-              }
-              action={
-                <>
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    className={props.classes.root}
-                  >
-                    <Link to="/products">View All Products</Link>
-                  </Button>
-                </>
-              }
-            >
-              <Carousel items={markdown} />
-            </Card>
+      <Hidden implementation="css">
+        <Page title="Gatsby Material UI Business Starter">
+          <SEO title="Home">
+            <meta
+              name="description"
+              content="Beautiful Gatsby Material UI Business Starter. Tiny code. Well organized. Ready to customize and go."
+            />
+          </SEO>
+          <Grid
+            spacing={24}
+            container
+            direction="row"
+            alignItems="flex-start"
+            justify="center"
+          >
+            <Grid item xs={12} md={10} className={props.classes.root}>
+              <Card
+                title="Our Products"
+                avatar={
+                  <Avatar>
+                    <Gift />
+                  </Avatar>
+                }
+                action={
+                  <>
+                    <Button
+                      variant="contained"
+                      color="secondary"
+                      className={props.classes.root}
+                    >
+                      <Link to="/products">View All Products</Link>
+                    </Button>
+                  </>
+                }
+              >
+                <Carousel items={markdown} />
+              </Card>
+            </Grid>
           </Grid>
-        </Grid>
-      </Page>
+        </Page>
+      </Hidden>
     );
   };
 
