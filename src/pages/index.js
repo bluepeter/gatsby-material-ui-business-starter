@@ -18,7 +18,7 @@ const styles = theme => ({
     },
   }),
   Home = props => {
-    console.log(props);
+    console.log("hi");
     const markdown = props.data.allMarkdownRemark.edges;
     return (
       <Page title="Gatsby Material UI Business Starter">
