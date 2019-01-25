@@ -14,11 +14,10 @@ import withRoot from "../utils/withRoot";
 
 const styles = theme => ({
     root: {
-      fontSize: "5em !important",
+      backgroundColor: "#9c27b0",
     },
   }),
   Home = props => {
-    console.log("hi");
     const markdown = props.data.allMarkdownRemark.edges;
     return (
       <Page title="Gatsby Material UI Business Starter">
@@ -45,10 +44,12 @@ const styles = theme => ({
               }
               action={
                 <>
-                  <Button variant="contained" color="secondary">
-                    <Link to="/products" className={props.classes.root}>
-                      View All Products
-                    </Link>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    className={props.classes.root}
+                  >
+                    <Link to="/products">View All Products</Link>
                   </Button>
                 </>
               }
