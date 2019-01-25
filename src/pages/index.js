@@ -16,7 +16,6 @@ import Hidden from "@material-ui/core/Hidden";
 const styles = theme => ({
     root: {
       backgroundColor: "#9c27b0",
-      fontSize: "2em",
     },
   }),
   Home = props => {
@@ -37,7 +36,7 @@ const styles = theme => ({
             alignItems="flex-start"
             justify="center"
           >
-            <Grid item xs={12} md={10} className={props.classes.root}>
+            <Grid item xs={12} md={10}>
               <Card
                 title="Our Products"
                 avatar={
