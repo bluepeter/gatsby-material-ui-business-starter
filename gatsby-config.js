@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: "Gatsby Material UI Business Starter",
     contact: {
-      phone: "503-724-8522",
+      phone: "503-555-1111",
       email: "peter@foxandgeese.com",
     },
     menuLinks: [
