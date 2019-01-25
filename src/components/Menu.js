@@ -16,7 +16,7 @@ const Menu = props => {
       <a
         href="https://github.com/bluepeter/gatsby-material-ui-business-starter"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         <IconButton style={{ color: "#fff" }}>
           <GithubCircle />

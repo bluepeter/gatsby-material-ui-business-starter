@@ -41,7 +41,7 @@ class MenuMobile extends React.Component {
             <a
               href="https://github.com/bluepeter/gatsby-material-ui-business-starter"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <MenuItem>Fork me on Github</MenuItem>
             </a>
