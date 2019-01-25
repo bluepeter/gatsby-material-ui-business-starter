@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
+import PropTypes from "prop-types";
 import SEO from "../components/SEO";
 import Card from "../components/Card";
 import Page from "../components/Page";
@@ -8,47 +9,57 @@ import Carousel from "../components/Carousel";
 import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import { Gift } from "mdi-material-ui";
+import { withStyles } from "@material-ui/core/styles";
+import withRoot from "../utils/withRoot";
 
-const Home = props => {
-  const markdown = props.data.allMarkdownRemark.edges;
-  return (
-    <Page title="Gatsby Material UI Business Starter">
-      <SEO title="Home">
-        <meta
-          name="description"
-          content="Beautiful Gatsby Material UI Business Starter. Tiny code. Well organized. Ready to customize and go."
-        />
-      </SEO>
-      <Grid
-        spacing={24}
-        container
-        direction="row"
-        alignItems="flex-start"
-        justify="center"
-      >
-        <Grid item xs={12} md={10}>
-          <Card
-            title="Our Products"
-            avatar={
-              <Avatar>
-                <Gift />
-              </Avatar>
-            }
-            action={
-              <>
-                <Button variant="contained" color="secondary">
-                  <Link to="/products">View All Products</Link>
-                </Button>
-              </>
-            }
-          >
-            <Carousel items={markdown} />
-          </Card>
+const styles = theme => ({
+    root: {
+      fontSize: "2em !important",
+    },
+  }),
+  Home = props => {
+    console.log(props);
+    const markdown = props.data.allMarkdownRemark.edges;
+    return (
+      <Page title="Gatsby Material UI Business Starter">
+        <SEO title="Home">
+          <meta
+            name="description"
+            content="Beautiful Gatsby Material UI Business Starter. Tiny code. Well organized. Ready to customize and go."
+          />
+        </SEO>
+        <Grid
+          spacing={24}
+          container
+          direction="row"
+          alignItems="flex-start"
+          justify="center"
+        >
+          <Grid item xs={12} md={10}>
+            <Card
+              title="Our Products"
+              avatar={
+                <Avatar>
+                  <Gift />
+                </Avatar>
+              }
+              action={
+                <>
+                  <Button variant="contained" color="secondary">
+                    <Link to="/products" className={props.classes.root}>
+                      View All Products
+                    </Link>
+                  </Button>
+                </>
+              }
+            >
+              <Carousel items={markdown} />
+            </Card>
+          </Grid>
         </Grid>
-      </Grid>
-    </Page>
-  );
-};
+      </Page>
+    );
+  };
 
 export const query = graphql`
   query {
@@ -72,4 +83,8 @@ export const query = graphql`
   }
 `;
 
-export default Home;
+Home.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Home);
