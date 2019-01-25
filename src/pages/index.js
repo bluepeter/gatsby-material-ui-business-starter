@@ -14,7 +14,7 @@ import withRoot from "../utils/withRoot";
 
 const styles = theme => ({
     root: {
-      fontSize: "2em !important",
+      fontSize: "5em !important",
     },
   }),
   Home = props => {
@@ -87,4 +87,4 @@ Home.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Home);
+export default withRoot(withStyles(styles)(Home));
