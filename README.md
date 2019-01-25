@@ -18,6 +18,22 @@ and in DEV with hot-reloading.
 - [Material Design icons](https://materialdesignicons.com/)
 - Relatively bare: we don't burden the project with a lot of complex hoopla
 
+## Styling
+
+You can use CSS in two different ways:
+
+- Edit the Stylus file
+  [`style.styl`](https://github.com/bluepeter/gatsby-material-ui-business-starter/blob/master/src/css/style.styl)
+  directly to add classes/etc. You can then adjust components to use these
+  classes.
+- Use Material UI's `withStyles()` to override and dynamically set classes from
+  within each component. For an example of how to do this, please see
+  [`HomeFeatures.js`](https://github.com/bluepeter/gatsby-material-ui-business-starter/blob/master/src/components/HomeFeatures.js),
+  including getting and using them theme colors.
+
+You can adjust the theme palette colors in
+[`getPageContext.js`](https://github.com/bluepeter/gatsby-material-ui-business-starter/blob/master/src/utils/getPageContext.js).
+
 ## Deployment
 
 ```
