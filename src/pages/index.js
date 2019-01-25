@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import SEO from "../components/SEO";
 import Card from "../components/Card";
 import Page from "../components/Page";
+import HomeFeatures from "../components/HomeFeatures";
 import Button from "@material-ui/core/Button";
 import Carousel from "../components/Carousel";
 import Grid from "@material-ui/core/Grid";
@@ -29,6 +30,8 @@ const styles = theme => ({
               content="Beautiful Gatsby Material UI Business Starter. Tiny code. Well organized. Ready to customize and go."
             />
           </SEO>
+
+          <HomeFeatures />
           <Grid
             spacing={24}
             container
