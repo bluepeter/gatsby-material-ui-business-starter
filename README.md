@@ -29,7 +29,7 @@ You can use CSS in two different ways:
 - Use Material UI's `withStyles()` to override and dynamically set classes from
   within each component. For an example of how to do this, please see
   [`HomeFeatures.js`](https://github.com/bluepeter/gatsby-material-ui-business-starter/blob/master/src/components/HomeFeatures.js),
-  including getting and using them theme colors.
+  including getting and using theme colors.
 
 You can adjust the theme palette colors in
 [`getPageContext.js`](https://github.com/bluepeter/gatsby-material-ui-business-starter/blob/master/src/utils/getPageContext.js).
