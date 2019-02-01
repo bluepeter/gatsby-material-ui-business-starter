@@ -2,6 +2,7 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import Divider from "@material-ui/core/Divider";
 import Typography from "@material-ui/core/Typography";
+import Hidden from "@material-ui/core/Hidden";
 
 const Footer = props => {
   const {
@@ -17,7 +18,12 @@ const Footer = props => {
       >
         <span>
           <Typography variant="caption" component="span">
-            ©{new Date().getFullYear()} {title} – {email} – {phone}
+            ©{new Date().getFullYear()} {title}{" "}
+            <Hidden only={["xs", "sm"]}>–</Hidden>
+            <Hidden only={["xl", "lg", "md"]}>
+              <br />
+            </Hidden>{" "}
+            {email} – {phone}
           </Typography>
         </span>
       </footer>
