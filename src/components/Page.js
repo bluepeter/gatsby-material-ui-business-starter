@@ -1,5 +1,4 @@
 import React from "react";
-import SEO from "./SEO";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Grid, Row, Col } from "react-flexbox-grid";
@@ -12,7 +11,6 @@ class Page extends React.Component {
     const { title, children } = this.props;
     return (
       <>
-        <SEO />
         <Header />
         <Grid style={{ marginTop: "94px" }}>
           <Row>
