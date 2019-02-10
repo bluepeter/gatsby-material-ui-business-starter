@@ -20,7 +20,7 @@ const styles = theme => ({
     },
   }),
   Home = props => {
-    const markdown = props.data.allMarkdownRemark.edges;
+    const products = props.data.allMarkdownRemark.edges;
     return (
       <Hidden implementation="css">
         <Page title="Gatsby Material UI Business Starter">
@@ -42,6 +42,7 @@ const styles = theme => ({
             <Grid item xs={12} md={10}>
               <Card
                 title="Our Products"
+                style={{ minHeight: "523px" }}
                 avatar={
                   <Avatar>
                     <Gift />
@@ -59,7 +60,7 @@ const styles = theme => ({
                   </>
                 }
               >
-                <Carousel items={markdown} />
+                <Carousel items={products} />
               </Card>
             </Grid>
           </Grid>
