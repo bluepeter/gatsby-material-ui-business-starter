@@ -3,22 +3,13 @@ import { graphql } from "gatsby";
 import SEO from "../../components/SEO";
 import Page from "../../components/Page";
 import List from "../../components/List";
-import Grid from "@material-ui/core/Grid";
 
 const Products = props => {
   const products = props.data.allMarkdownRemark.edges;
   return (
     <Page title="Products">
       <SEO title="Products" />
-      <Grid
-        spacing={24}
-        container
-        direction="row"
-        alignItems="flex-start"
-        justify="center"
-      >
-        <List items={products} />
-      </Grid>
+      <List items={products} />
     </Page>
   );
 };

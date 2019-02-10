@@ -8,7 +8,13 @@ import Typography from "@material-ui/core/Typography";
 
 const List = props => {
   return (
-    <>
+    <Grid
+      spacing={24}
+      container
+      direction="row"
+      alignItems="flex-start"
+      justify="center"
+    >
       {props.items.map(edge => {
         const {
           node: {
@@ -33,7 +39,7 @@ const List = props => {
           </Grid>
         );
       })}
-    </>
+    </Grid>
   );
 };
 
