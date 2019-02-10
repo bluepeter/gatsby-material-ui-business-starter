@@ -2,6 +2,7 @@
   "name": "gatsby-material-ui-business-starter",
   "version": "1.0.0",
   "author": "Peter Bray <peter@foxandgeese.com>",
+  "description": "Beautiful Gatsby Material Design Business Starter",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
