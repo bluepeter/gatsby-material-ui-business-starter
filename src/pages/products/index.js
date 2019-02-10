@@ -1,12 +1,9 @@
 import React from "react";
-import { Link, graphql, withPrefix } from "gatsby";
+import { graphql } from "gatsby";
 import SEO from "../../components/SEO";
-import Typography from "@material-ui/core/Typography";
 import Page from "../../components/Page";
+import List from "../../components/List";
 import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 
 const Products = props => {
   const products = props.data.allMarkdownRemark.edges;
@@ -20,30 +17,7 @@ const Products = props => {
         alignItems="flex-start"
         justify="center"
       >
-        {products.map(edge => {
-          const {
-            node: {
-              excerpt,
-              frontmatter: { path, title, image },
-            },
-          } = edge;
-          return (
-            <Grid item xs={12} md={6} key={path}>
-              <Card>
-                <CardMedia
-                  style={{ height: "200px" }}
-                  image={withPrefix(image)}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    <Link to={path}>{title}</Link>
-                  </Typography>
-                  <Typography component="p">{excerpt}</Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          );
-        })}
+        <List items={products} />
       </Grid>
     </Page>
   );
