@@ -3,7 +3,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import Typography from "@material-ui/core/Typography";
-import withRoot from "../utils/withRoot";
 import "../css/style.styl";
 
 class Page extends React.Component {
@@ -34,4 +33,4 @@ class Page extends React.Component {
   }
 }
 
-export default withRoot(Page);
+export default Page;

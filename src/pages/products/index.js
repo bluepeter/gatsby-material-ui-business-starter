@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import SEO from "../../components/SEO";
 import Page from "../../components/Page";
 import List from "../../components/List";
+import withRoot from "../../utils/withRoot";
 
 const Products = props => {
   const products = props.data.allMarkdownRemark.edges;
@@ -34,4 +35,4 @@ export const query = graphql`
   }
 `;
 
-export default Products;
+export default withRoot(Products);

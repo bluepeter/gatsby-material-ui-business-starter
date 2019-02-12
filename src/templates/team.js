@@ -5,6 +5,7 @@ import Page from "../components/Page";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
+import withRoot from "../utils/withRoot";
 
 const Detail = ({ data }) => {
   const { title, image, jobtitle } = data.markdownRemark.frontmatter,
@@ -52,4 +53,4 @@ export const query = graphql`
   }
 `;
 
-export default Detail;
+export default withRoot(Detail);
