@@ -4,7 +4,7 @@ module.exports = {
     title: "Gatsby Material UI Business Starter",
     contact: {
       phone: "503-555-1111",
-      email: "peter@foxandgeese.com",
+      email: "hi@foxandgeese.com",
     },
     menuLinks: [
       {
