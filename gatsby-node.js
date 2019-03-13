@@ -5,9 +5,10 @@ const path = require("path"),
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  ["products", "team"].forEach(async item => {
-    const result = await graphql(
-      `
+  return Promise.all(
+    ["products", "team"].map(async item => {
+      const result = await graphql(
+        `
         query {
           ${item}: allMarkdownRemark(
             filter: { fileAbsolutePath: { regex: "/${item}/" } }
@@ -27,18 +28,21 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       `
-    );
-    result.data[item].edges.forEach(({ node }) => {
-      const component = fs.existsSync(`src/templates/${item}.js`)
-        ? // Use specific template for item, e.g., products.js, if it exists.
-          path.resolve(`src/templates/${item}.js`)
-        : // Or use general template.
-          path.resolve(`src/templates/general.js`);
-      createPage({
-        component,
-        path: node.frontmatter.path,
-        context: { id: node.id },
-      });
-    });
-  });
+      );
+      return Promise.all(
+        result.data[item].edges.map(({ node }) => {
+          const component = fs.existsSync(`src/templates/${item}.js`)
+            ? // Use specific template for item, e.g., products.js, if it exists.
+              path.resolve(`src/templates/${item}.js`)
+            : // Or use general template.
+              path.resolve(`src/templates/general.js`);
+          return createPage({
+            component,
+            path: node.frontmatter.path,
+            context: { id: node.id },
+          });
+        })
+      );
+    })
+  );
 };
