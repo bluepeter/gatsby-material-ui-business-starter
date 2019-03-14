@@ -21,7 +21,12 @@ const styles = theme => ({
     featureGrid: {
       marginBottom: "25px",
     },
-    avi: { width: "40px", height: "40px", color: "#fff" },
+    avi: {
+      width: "40px",
+      height: "40px",
+      color: "#fff",
+      backgroundColor: theme.palette.secondary.light,
+    },
   }),
   HomeFeatures = props => {
     return (
@@ -37,10 +42,7 @@ const styles = theme => ({
           <Chip
             className={props.classes.featureChipRight}
             avatar={
-              <Avatar
-                className={props.classes.avi}
-                style={{ backgroundColor: props.theme.palette.secondary.light }}
-              >
+              <Avatar className={props.classes.avi}>
                 <Robot />
               </Avatar>
             }
@@ -51,10 +53,7 @@ const styles = theme => ({
           <Chip
             className={props.classes.featureChip}
             avatar={
-              <Avatar
-                className={props.classes.avi}
-                style={{ backgroundColor: props.theme.palette.secondary.light }}
-              >
+              <Avatar className={props.classes.avi}>
                 <Robot />
               </Avatar>
             }

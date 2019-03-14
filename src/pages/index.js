@@ -15,7 +15,7 @@ import withRoot from "../utils/withRoot";
 
 const styles = theme => ({
     root: {
-      backgroundColor: "#9c27b0",
+      fontWeight: "bold",
     },
   }),
   Home = props => {
