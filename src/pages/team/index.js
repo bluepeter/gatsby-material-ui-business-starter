@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, graphql, withPrefix } from "gatsby";
+import { Link, graphql } from "gatsby";
 import Typography from "@material-ui/core/Typography";
 import SEO from "../../components/SEO";
 import Page from "../../components/Page";
@@ -28,13 +28,18 @@ const Team = props => {
         {teams.map(edge => {
           const {
             node: {
-              frontmatter: { path, title, image, jobtitle },
+              frontmatter: {
+                path,
+                title,
+                image: { publicURL },
+                jobtitle,
+              },
             },
           } = edge;
           return (
             <Link key={path} to={path}>
               <GridListTile cols={1}>
-                <img src={withPrefix(image)} alt={title} />
+                <img src={publicURL} alt={title} />
                 <GridListTileBar
                   title={title}
                   subtitle={jobtitle}
@@ -66,9 +71,11 @@ export const query = graphql`
         node {
           html
           frontmatter {
+            image {
+              publicURL
+            }
             title
             path
-            image
             jobtitle
           }
         }

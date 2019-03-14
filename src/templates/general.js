@@ -1,21 +1,23 @@
 import React from "react";
-import { graphql, withPrefix } from "gatsby";
+import { graphql } from "gatsby";
 import SEO from "../components/SEO";
 import Page from "../components/Page";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import withRoot from "../utils/withRoot";
 
 const Detail = ({ data }) => {
-  const { title, image } = data.markdownRemark.frontmatter,
+  const {
+      title,
+      image: { publicURL },
+    } = data.markdownRemark.frontmatter,
     { html } = data.markdownRemark;
   return (
     <Page>
       <SEO title={title} />
       <Card>
-        <CardMedia style={{ height: "200px" }} image={withPrefix(image)} />
+        <CardMedia style={{ height: "200px" }} image={publicURL} />
         <CardContent>
           <Typography gutterBottom variant="h2" component="h2">
             {title}
@@ -31,13 +33,15 @@ export const query = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
+        image {
+          publicURL
+        }
         title
         path
-        image
       }
       html
     }
   }
 `;
 
-export default withRoot(Detail);
+export default Detail;

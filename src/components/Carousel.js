@@ -1,5 +1,5 @@
 import React from "react";
-import { withPrefix, Link } from "gatsby";
+import { Link } from "gatsby";
 import MobileStepper from "@material-ui/core/MobileStepper";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -51,7 +51,11 @@ class Carousel extends React.Component {
               const {
                 node: {
                   excerpt,
-                  frontmatter: { path, title, image },
+                  frontmatter: {
+                    path,
+                    title,
+                    image: { publicURL },
+                  },
                 },
               } = item;
               return (
@@ -60,7 +64,7 @@ class Carousel extends React.Component {
                     <Card>
                       <CardMedia
                         style={{ height: "200px" }}
-                        image={withPrefix(image)}
+                        image={publicURL}
                       />
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">

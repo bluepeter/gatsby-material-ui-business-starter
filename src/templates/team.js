@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, withPrefix } from "gatsby";
+import { graphql } from "gatsby";
 import SEO from "../components/SEO";
 import Page from "../components/Page";
 import Grid from "@material-ui/core/Grid";
@@ -8,7 +8,11 @@ import Typography from "@material-ui/core/Typography";
 import withRoot from "../utils/withRoot";
 
 const Detail = ({ data }) => {
-  const { title, image, jobtitle } = data.markdownRemark.frontmatter,
+  const {
+      title,
+      image: { publicURL },
+      jobtitle,
+    } = data.markdownRemark.frontmatter,
     { html } = data.markdownRemark;
   return (
     <Page>
@@ -22,7 +26,7 @@ const Detail = ({ data }) => {
           justify="center"
         >
           <Grid item xs={12} md={4}>
-            <img style={{ width: "100%" }} src={withPrefix(image)} alt="" />
+            <img style={{ width: "100%" }} src={publicURL} alt="" />
           </Grid>
           <Grid item xs={12} md={8}>
             <Typography gutterBottom variant="h2" component="h2">
@@ -43,9 +47,11 @@ export const query = graphql`
   query($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
+        image {
+          publicURL
+        }
         title
         path
-        image
         jobtitle
       }
       html

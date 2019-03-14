@@ -67,6 +67,13 @@ const styles = theme => ({
 
 export const query = graphql`
   query {
+    allFile(filter: { extension: { eq: "jpg" } }) {
+      edges {
+        node {
+          publicURL
+        }
+      }
+    }
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/products/" } }
       sort: { fields: [frontmatter___date], order: DESC }
@@ -75,10 +82,12 @@ export const query = graphql`
         node {
           id
           frontmatter {
+            image {
+              publicURL
+            }
             path
             title
             date(formatString: "DD MMMM YYYY")
-            image
           }
           excerpt
         }

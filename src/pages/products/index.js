@@ -25,9 +25,11 @@ export const query = graphql`
         node {
           excerpt
           frontmatter {
+            image {
+              publicURL
+            }
             title
             path
-            image
           }
         }
       }
