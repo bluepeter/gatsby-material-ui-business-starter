@@ -58,5 +58,15 @@ yarn
 To build, watch for file edits and hot-reload, and run locally:
 
 ```
-gatsby develop
+yarn run develop
 ```
+
+To build for PROD:
+
+```
+yarn run build
+```
+
+While you could run `gatsby` commands directly, it is preferable to use `yarn run` (and see corresponding scripts in `package.json`) so as to avoid
+differences between local and global `gatsby` versions. ([See the CLI
+instructions for more details](https://www.npmjs.com/package/gatsby-cli).)
