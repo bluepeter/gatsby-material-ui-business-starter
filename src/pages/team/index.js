@@ -9,6 +9,7 @@ import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import { Rocket } from "mdi-material-ui";
 import withRoot from "../../utils/withRoot";
+import { withPrefix } from "gatsby";
 
 const Team = props => {
   const teams = props.data.allMarkdownRemark.edges;
@@ -39,7 +40,7 @@ const Team = props => {
           return (
             <Link key={path} to={path}>
               <GridListTile cols={1}>
-                <img src={publicURL} alt={title} />
+                <img src={withPrefix(publicURL)} alt={title} />
                 <GridListTileBar
                   title={title}
                   subtitle={jobtitle}
