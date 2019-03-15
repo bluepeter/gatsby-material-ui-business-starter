@@ -5,6 +5,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
+import { withPrefix } from "gatsby";
 
 const List = props => {
   return (
@@ -29,7 +30,10 @@ const List = props => {
         return (
           <Grid item xs={12} md={6} key={path}>
             <Card>
-              <CardMedia style={{ height: "200px" }} image={publicURL} />
+              <CardMedia
+                style={{ height: "200px" }}
+                image={withPrefix(publicURL)}
+              />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                   <Link to={path}>{title}</Link>

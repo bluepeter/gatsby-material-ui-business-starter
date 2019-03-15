@@ -9,6 +9,7 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import { autoPlay } from "react-swipeable-views-utils";
+import { withPrefix } from "gatsby";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -64,7 +65,7 @@ class Carousel extends React.Component {
                     <Card>
                       <CardMedia
                         style={{ height: "200px" }}
-                        image={publicURL}
+                        image={withPrefix(publicURL)}
                       />
                       <CardContent>
                         <Typography gutterBottom variant="h5" component="h2">

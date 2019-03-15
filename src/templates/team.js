@@ -6,6 +6,7 @@ import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import withRoot from "../utils/withRoot";
+import { withPrefix } from "gatsby";
 
 const Detail = ({ data }) => {
   const {
@@ -26,7 +27,7 @@ const Detail = ({ data }) => {
           justify="center"
         >
           <Grid item xs={12} md={4}>
-            <img style={{ width: "100%" }} src={publicURL} alt="" />
+            <img style={{ width: "100%" }} src={withPrefix(publicURL)} alt="" />
           </Grid>
           <Grid item xs={12} md={8}>
             <Typography gutterBottom variant="h2" component="h2">

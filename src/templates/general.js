@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import withRoot from "../utils/withRoot";
+import { withPrefix } from "gatsby";
 
 const Detail = ({ data }) => {
   const {
@@ -18,7 +19,7 @@ const Detail = ({ data }) => {
     <Page>
       <SEO title={title} />
       <Card>
-        <CardMedia style={{ height: "200px" }} image={publicURL} />
+        <CardMedia style={{ height: "200px" }} image={withPrefix(publicURL)} />
         <CardContent>
           <Typography gutterBottom variant="h2" component="h2">
             {title}
