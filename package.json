@@ -26,7 +26,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "react-flexbox-grid": "^2.1.2",
     "react-helmet": "^5.2.0",
     "react-jss": "^8.6.1",
     "react-swipeable-views": "^0.13.1",

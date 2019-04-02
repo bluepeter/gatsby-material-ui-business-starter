@@ -30,37 +30,28 @@ const styles = theme => ({
         </SEO>
 
         <HomeFeatures />
-        <Grid
-          spacing={24}
-          container
-          direction="row"
-          alignItems="flex-start"
-          justify="center"
+        <Card
+          title="Our Products"
+          avatar={
+            <Avatar>
+              <Gift />
+            </Avatar>
+          }
+          action={
+            <>
+              <Button
+                variant="contained"
+                color="secondary"
+                className={props.classes.root}
+              >
+                <Link to="/products">View All Products</Link>
+              </Button>
+            </>
+          }
+          style={{ minHeight: 523, maxWidth: 880 }}
         >
-          <Grid item xs={12} md={10} style={{ minHeight: "523px" }}>
-            <Card
-              title="Our Products"
-              avatar={
-                <Avatar>
-                  <Gift />
-                </Avatar>
-              }
-              action={
-                <>
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    className={props.classes.root}
-                  >
-                    <Link to="/products">View All Products</Link>
-                  </Button>
-                </>
-              }
-            >
-              <Carousel items={products} />
-            </Card>
-          </Grid>
-        </Grid>
+          <Carousel items={products} />
+        </Card>
       </Page>
     );
   };
