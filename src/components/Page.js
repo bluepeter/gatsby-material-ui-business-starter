@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import {Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import "../css/style.styl";
 
 class Page extends React.Component {
@@ -10,8 +10,19 @@ class Page extends React.Component {
     return (
       <>
         <Header />
-        <Grid container justify="center" style={{ marginTop: 94 }}>
-          <Grid item style={{ maxWidth: 'calc(100% - 60px)'}}>
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          style={{ marginTop: 94 }}
+        >
+          <Grid
+            item
+            style={{
+              maxWidth: "calc(1136px - 60px)",
+              width: "calc(100% - 60px)",
+            }}
+          >
             {title ? (
               <Typography
                 variant="h2"

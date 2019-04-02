@@ -47,7 +47,7 @@ const styles = theme => ({
               </Button>
             </>
           }
-          style={{ minHeight: 523, maxWidth: 880 }}
+          style={{ minHeight: 523 }}
         >
           <Carousel items={products} />
         </Card>
