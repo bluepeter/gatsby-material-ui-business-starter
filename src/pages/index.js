@@ -7,7 +7,6 @@ import Page from "../components/Page";
 import HomeFeatures from "../components/HomeFeatures";
 import Button from "@material-ui/core/Button";
 import Carousel from "../components/Carousel";
-import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
 import { Gift } from "mdi-material-ui";
 import { withStyles } from "@material-ui/core/styles";
