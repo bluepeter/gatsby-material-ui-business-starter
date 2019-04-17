@@ -2,7 +2,7 @@
 
 const React = require("react"),
   { renderToString } = require("react-dom/server"),
-  JssProvider = require("react-jss/lib/JssProvider").default,
+  StylesProvider = require("@material-ui/styles/StylesProvider").default,
   getPageContext = require("./src/utils/getPageContext").default;
 
 function replaceRenderer({
@@ -13,9 +13,9 @@ function replaceRenderer({
   // Get the context of the page to collected side effects.
   const muiPageContext = getPageContext(),
     bodyHTML = renderToString(
-      <JssProvider registry={muiPageContext.sheetsRegistry}>
+      <StylesProvider sheetsRegistry={muiPageContext.sheetsRegistry}>
         {bodyComponent}
-      </JssProvider>
+      </StylesProvider>
     );
 
   replaceBodyHTMLString(bodyHTML);

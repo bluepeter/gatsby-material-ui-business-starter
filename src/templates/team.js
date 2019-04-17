@@ -1,3 +1,4 @@
+import withRoot from "../utils/withRoot";
 import React from "react";
 import { graphql } from "gatsby";
 import SEO from "../components/SEO";
@@ -5,10 +6,19 @@ import Page from "../components/Page";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
-import withRoot from "../utils/withRoot";
 import { withPrefix } from "gatsby";
+import withStyles from "@material-ui/styles/withStyles";
 
-const Detail = ({ data }) => {
+const styles = {
+  paper: {
+    padding: "25px"
+  },
+  image: {
+    width: "100%"
+  }
+};
+
+const Detail = ({ classes, data }) => {
   const {
       title,
       image: { publicURL },
@@ -18,7 +28,7 @@ const Detail = ({ data }) => {
   return (
     <Page>
       <SEO title={title} />
-      <Paper style={{ padding: "25px" }}>
+      <Paper className={classes.paper}>
         <Grid
           spacing={24}
           container
@@ -27,7 +37,7 @@ const Detail = ({ data }) => {
           justify="center"
         >
           <Grid item xs={12} md={4}>
-            <img style={{ width: "100%" }} src={withPrefix(publicURL)} alt="" />
+            <img className={classes.image} src={withPrefix(publicURL)} alt="" />
           </Grid>
           <Grid item xs={12} md={8}>
             <Typography gutterBottom variant="h2" component="h2">
@@ -60,4 +70,4 @@ export const query = graphql`
   }
 `;
 
-export default withRoot(Detail);
+export default withRoot(withStyles(styles)(Detail));

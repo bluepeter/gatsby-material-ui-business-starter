@@ -1,3 +1,4 @@
+import withRoot from "../utils/withRoot";
 import React from "react";
 import { graphql } from "gatsby";
 import SEO from "../components/SEO";
@@ -6,10 +7,16 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import withRoot from "../utils/withRoot";
 import { withPrefix } from "gatsby";
+import withStyles from "@material-ui/styles/withStyles";
 
-const Detail = ({ data }) => {
+const styles = {
+  cardMedia: {
+    height: "200px"
+  }
+};
+
+const Detail = ({ classes, data }) => {
   const {
       title,
       image: { publicURL },
@@ -19,7 +26,7 @@ const Detail = ({ data }) => {
     <Page>
       <SEO title={title} />
       <Card>
-        <CardMedia style={{ height: "200px" }} image={withPrefix(publicURL)} />
+        <CardMedia className={classes.cardMedia} image={withPrefix(publicURL)} />
         <CardContent>
           <Typography gutterBottom variant="h2" component="h2">
             {title}
@@ -46,4 +53,4 @@ export const query = graphql`
   }
 `;
 
-export default withRoot(Detail);
+export default withRoot(withStyles(styles)(Detail));

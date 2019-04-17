@@ -5,6 +5,13 @@ import MenuItem from "@material-ui/core/MenuItem";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import IconButton from "@material-ui/core/IconButton";
 import { DotsVertical } from "mdi-material-ui";
+import withStyles from "@material-ui/styles/withStyles";
+
+const styles = {
+  dotsVerticalIcon: {
+    color: "#efefef"
+  }
+};
 
 class MenuMobile extends React.Component {
   state = {
@@ -20,12 +27,21 @@ class MenuMobile extends React.Component {
   };
 
   render() {
-    const { anchorEl } = this.state,
-      { menuLinks } = this.props.data.site.siteMetadata;
+    const { anchorEl } = this.state;
+    const {
+      classes,
+      data: {
+        site: {
+          siteMetadata: {
+            menuLinks
+          }
+        }
+      }
+    } = this.props;
     return (
       <>
         <IconButton onClick={this.handleOpen}>
-          <DotsVertical style={{ color: "#efefef" }} />
+          <DotsVertical className={classes.dotsVerticalIcon} />
         </IconButton>
         <ClickAwayListener onClickAway={this.handleClose}>
           <Menu
@@ -52,6 +68,8 @@ class MenuMobile extends React.Component {
   }
 }
 
+const StyledMenuMobile = withStyles(styles)(MenuMobile);
+
 export default props => (
   <StaticQuery
     query={graphql`
@@ -66,6 +84,6 @@ export default props => (
         }
       }
     `}
-    render={data => <MenuMobile active={props.active} data={data} />}
+    render={data => <StyledMenuMobile active={props.active} data={data} />}
   />
 );

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Chip from "@material-ui/core/Chip";
 import Grid from "@material-ui/core/Grid";
 import Avatar from "@material-ui/core/Avatar";
-import { withStyles } from "@material-ui/core/styles";
+import withStyles from "@material-ui/styles/withStyles";
 import { Robot } from "mdi-material-ui";
 
 const styles = theme => ({
@@ -63,8 +63,7 @@ const styles = theme => ({
   };
 
 HomeFeatures.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles, { withTheme: true })(HomeFeatures);
+export default withStyles(styles)(HomeFeatures);

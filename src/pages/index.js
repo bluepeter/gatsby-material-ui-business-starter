@@ -1,3 +1,4 @@
+import withRoot from "../utils/withRoot";
 import React from "react";
 import { graphql, Link } from "gatsby";
 import PropTypes from "prop-types";
@@ -9,8 +10,7 @@ import Button from "@material-ui/core/Button";
 import Carousel from "../components/Carousel";
 import Avatar from "@material-ui/core/Avatar";
 import { Gift } from "mdi-material-ui";
-import { withStyles } from "@material-ui/core/styles";
-import withRoot from "../utils/withRoot";
+import withStyles from "@material-ui/styles/withStyles";
 
 const styles = theme => ({
     root: {
@@ -37,15 +37,15 @@ const styles = theme => ({
             </Avatar>
           }
           action={
-            <>
-              <Button
-                variant="contained"
-                color="secondary"
-                className={props.classes.root}
-              >
-                <Link to="/products">View All Products</Link>
-              </Button>
-            </>
+            <Button
+              variant="contained"
+              color="secondary"
+              className={props.classes.root}
+              component={Link}
+              to="/products"
+            >
+              View All Products
+            </Button>
           }
           style={{ minHeight: 523 }}
         >

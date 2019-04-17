@@ -6,8 +6,16 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import { withPrefix } from "gatsby";
+import withStyles from "@material-ui/styles/withStyles";
+
+const styles = {
+  cardMedia: {
+    height: "200px"
+  }
+};
 
 const List = props => {
+  const { classes } = props;
   return (
     <Grid
       spacing={24}
@@ -31,7 +39,7 @@ const List = props => {
           <Grid item xs={12} md={6} key={path}>
             <Card>
               <CardMedia
-                style={{ height: "200px" }}
+                className={classes.cardMedia}
                 image={withPrefix(publicURL)}
               />
               <CardContent>
@@ -48,4 +56,4 @@ const List = props => {
   );
 };
 
-export default List;
+export default withStyles(styles)(List);

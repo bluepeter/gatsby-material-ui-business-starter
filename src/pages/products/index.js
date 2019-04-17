@@ -1,9 +1,9 @@
+import withRoot from "../../utils/withRoot";
 import React from "react";
 import { graphql } from "gatsby";
 import SEO from "../../components/SEO";
 import Page from "../../components/Page";
 import List from "../../components/List";
-import withRoot from "../../utils/withRoot";
 
 const Products = props => {
   const products = props.data.allMarkdownRemark.edges;

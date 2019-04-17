@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, withPrefix } from "gatsby";
 import MobileStepper from "@material-ui/core/MobileStepper";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -9,9 +9,15 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import { autoPlay } from "react-swipeable-views-utils";
-import { withPrefix } from "gatsby";
+import withStyles from '@material-ui/styles/withStyles';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+
+const styles = {
+  cardMedia: {
+    height: "200px"
+  }
+};
 
 class Carousel extends React.Component {
   state = {
@@ -36,7 +42,7 @@ class Carousel extends React.Component {
 
   render() {
     const { activeStep } = this.state,
-      { items } = this.props,
+      { classes, items } = this.props,
       maxSteps = items.length;
     return (
       <Paper elevation={0}>
@@ -64,7 +70,7 @@ class Carousel extends React.Component {
                   {Math.abs(activeStep - index) <= 2 ? (
                     <Card>
                       <CardMedia
-                        style={{ height: "200px" }}
+                        className={classes.cardMedia}
                         image={withPrefix(publicURL)}
                       />
                       <CardContent>
@@ -108,4 +114,4 @@ class Carousel extends React.Component {
   }
 }
 
-export default Carousel;
+export default withStyles(styles)(Carousel);
