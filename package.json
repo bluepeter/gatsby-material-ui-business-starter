@@ -6,8 +6,8 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "lint": "eslint src/ && prettier --check 'src/**/*.js' && depcheck .",
-    "fix": "eslint --fix src/ && prettier --write 'src/**/*.js' && depcheck .",
+    "lint": "eslint src/ && prettier --check 'src/**/*.js'",
+    "fix": "eslint --fix src/ && prettier --write 'src/**/*.js'",
     "start": "npm run develop",
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
@@ -35,7 +35,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "depcheck": "^0.9.2",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
