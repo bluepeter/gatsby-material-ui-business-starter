@@ -34,7 +34,7 @@ const HomeFeatures = (props) => {
       className={props.classes.featureGrid}
       container
       justify="center"
-      spacing={24}
+      spacing={8}
     >
       <Grid item md={6}>
         <Chip

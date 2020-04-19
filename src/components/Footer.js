@@ -7,11 +7,11 @@ import withStyles from "@material-ui/styles/withStyles";
 
 const styles = (theme) => ({
   divider: {
-    marginTop: theme.spacing.unit * 6,
-    marginBottom: theme.spacing.unit * 3,
+    marginTop: theme.spacing(6),
+    marginBottom: theme.spacing(3),
   },
   footer: {
-    marginBottom: theme.spacing.unit * 3,
+    marginBottom: theme.spacing(3),
     whiteSpace: "nowrap",
   },
 });

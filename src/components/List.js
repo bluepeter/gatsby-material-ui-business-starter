@@ -22,7 +22,7 @@ const List = (props) => {
       container
       direction="row"
       justify="center"
-      spacing={24}
+      spacing={8}
     >
       {props.items.map((edge) => {
         const {

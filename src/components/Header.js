@@ -16,12 +16,7 @@ const Header = (props) => {
   return (
     <AppBar id="appBar">
       <Toolbar>
-        <Grid
-          alignItems="center"
-          container
-          justify="space-between"
-          spacing={16}
-        >
+        <Grid alignItems="center" container justify="space-between" spacing={8}>
           <Grid item>
             <Chip
               avatar={
