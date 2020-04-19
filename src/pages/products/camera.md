@@ -2,7 +2,7 @@
 path: "/products/camera"
 title: "Curious Camera"
 date: 2018-11-18T12:33:46+10:00
-image: "./pavel-fertikh-113220-unsplash.jpg"
+image: "pavel-fertikh-113220-unsplash.jpg"
 ---
 
 Disrupt air plant pop-up, lo-fi ugh tilde man bun tumblr pinterest forage man

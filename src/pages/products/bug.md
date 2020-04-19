@@ -2,7 +2,7 @@
 path: "/products/bug"
 title: "Bumbling Bug"
 date: 2018-11-18T12:33:46+10:00
-image: "./mink-mingle-424587-unsplash.jpg"
+image: "mink-mingle-424587-unsplash.jpg"
 ---
 
 Chambray offal wayfarers hoodie everyday carry photo booth, narwhal schlitz put

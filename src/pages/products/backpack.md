@@ -2,7 +2,7 @@
 path: "/products/backpack"
 title: "Balderdash Backpack"
 date: 2018-11-18T12:33:46+10:00
-image: "./jakob-owens-235219-unsplash.jpg"
+image: "jakob-owens-235219-unsplash.jpg"
 ---
 
 Wolf incididunt authentic fam kale chips kitsch. Consectetur blog schlitz

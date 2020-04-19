@@ -2,7 +2,7 @@
 path: "/products/sneakers"
 title: "Sensitive Sneakers"
 date: 2018-11-18T12:33:46+10:00
-image: "./paul-gaudriault-661082-unsplash.jpg"
+image: "paul-gaudriault-661082-unsplash.jpg"
 ---
 
 Offal dolor et portland cillum succulents occaecat gluten-free keffiyeh jean

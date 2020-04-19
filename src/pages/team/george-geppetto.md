@@ -3,7 +3,7 @@ path: "/team/george-geppetto"
 title: "George Geppetto"
 date: 2018-11-19T10:47:58+10:00
 draft: false
-image: "./robert-zunikoff-592158-unsplash.jpg"
+image: "robert-zunikoff-592158-unsplash.jpg"
 jobtitle: "Chief Executive Puppet"
 weight: 2
 ---

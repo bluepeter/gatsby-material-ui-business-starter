@@ -34,7 +34,7 @@ const Detail = ({ classes, data }) => {
           container
           direction="row"
           justify="center"
-          spacing={24}
+          spacing={8}
         >
           <Grid item md={4} xs={12}>
             <img alt="" className={classes.image} src={withPrefix(publicURL)} />

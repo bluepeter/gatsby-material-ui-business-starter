@@ -2,7 +2,7 @@
 path: "/products/headphones"
 title: "Hallucinogenic Headphones"
 date: 2018-11-18T12:33:46+10:00
-image: "./malte-wingen-381988-unsplash.jpg"
+image: "malte-wingen-381988-unsplash.jpg"
 ---
 
 Dreamcatcher hoodie fashion axe quis helvetica tilde. Id meditation try-hard

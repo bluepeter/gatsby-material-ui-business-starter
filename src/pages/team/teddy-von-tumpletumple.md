@@ -3,7 +3,7 @@ path: "/team/teddy-von-tumpletumple"
 title: "Teddy von TumpleTumple"
 date: 2018-11-19T10:47:58+10:00
 draft: false
-image: "./sandy-millar-773383-unsplash.jpg"
+image: "sandy-millar-773383-unsplash.jpg"
 jobtitle: "Chief Teddy Bear"
 weight: 1
 ---
