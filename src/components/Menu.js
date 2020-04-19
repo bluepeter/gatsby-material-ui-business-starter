@@ -2,7 +2,7 @@ import React from "react";
 import { StaticQuery, Link, graphql } from "gatsby";
 import Button from "@material-ui/core/Button";
 import IconButton from "@material-ui/core/IconButton";
-import { GithubCircle } from "mdi-material-ui";
+import { Github } from "mdi-material-ui";
 import withStyles from "@material-ui/styles/withStyles";
 
 const styles = theme => ({
@@ -33,7 +33,7 @@ const Menu = withStyles(styles)(props => {
         rel="noopener noreferrer"
       >
         <IconButton className={classes.menuButton}>
-          <GithubCircle />
+          <Github />
         </IconButton>
       </a>
     </>
