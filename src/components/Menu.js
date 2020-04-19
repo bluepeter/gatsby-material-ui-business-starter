@@ -5,32 +5,32 @@ import IconButton from "@material-ui/core/IconButton";
 import { Github } from "mdi-material-ui";
 import withStyles from "@material-ui/styles/withStyles";
 
-const styles = theme => ({
+const styles = (theme) => ({
   menuButton: {
-    color: theme.palette.primary.contrastText
-  }
+    color: theme.palette.primary.contrastText,
+  },
 });
 
-const Menu = withStyles(styles)(props => {
+const Menu = withStyles(styles)((props) => {
   const {
     classes,
     data: {
       site: {
-        siteMetadata: { menuLinks }
-      }
-    }
+        siteMetadata: { menuLinks },
+      },
+    },
   } = props;
   return (
     <>
-      {menuLinks.map(link => (
+      {menuLinks.map((link) => (
         <Link key={link.name} to={link.link}>
           <Button className={classes.menuButton}>{link.name}</Button>
         </Link>
       ))}
       <a
         href="https://github.com/bluepeter/gatsby-material-ui-business-starter"
-        target="_blank"
         rel="noopener noreferrer"
+        target="_blank"
       >
         <IconButton className={classes.menuButton}>
           <Github />
@@ -40,7 +40,7 @@ const Menu = withStyles(styles)(props => {
   );
 });
 
-export default props => (
+export default () => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -54,6 +54,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Menu data={data} />}
+    render={(data) => <Menu data={data} />}
   />
 );

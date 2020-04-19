@@ -10,21 +10,21 @@ import withStyles from "@material-ui/styles/withStyles";
 
 const styles = {
   cardMedia: {
-    height: "200px"
-  }
+    height: "200px",
+  },
 };
 
-const List = props => {
+const List = (props) => {
   const { classes } = props;
   return (
     <Grid
-      spacing={24}
+      alignItems="flex-start"
       container
       direction="row"
-      alignItems="flex-start"
       justify="center"
+      spacing={24}
     >
-      {props.items.map(edge => {
+      {props.items.map((edge) => {
         const {
           node: {
             excerpt,
@@ -36,14 +36,14 @@ const List = props => {
           },
         } = edge;
         return (
-          <Grid item xs={12} md={6} key={path}>
+          <Grid item key={path} md={6} xs={12}>
             <Card>
               <CardMedia
                 className={classes.cardMedia}
                 image={withPrefix(publicURL)}
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography component="h2" gutterBottom variant="h5">
                   <Link to={path}>{title}</Link>
                 </Typography>
                 <Typography component="p">{excerpt}</Typography>

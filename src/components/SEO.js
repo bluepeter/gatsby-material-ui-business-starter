@@ -23,9 +23,9 @@ const SEO = (props) => (
 );
 
 SEO.defaultProps = {
+  keywords: [],
   lang: "en",
   meta: [],
-  keywords: [],
 };
 
 export default SEO;

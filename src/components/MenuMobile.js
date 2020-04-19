@@ -9,8 +9,8 @@ import withStyles from "@material-ui/styles/withStyles";
 
 const styles = {
   dotsVerticalIcon: {
-    color: "#efefef"
-  }
+    color: "#efefef",
+  },
 };
 
 class MenuMobile extends React.Component {
@@ -18,7 +18,7 @@ class MenuMobile extends React.Component {
     anchorEl: null,
   };
 
-  handleOpen = event => {
+  handleOpen = (event) => {
     this.setState({ anchorEl: event.currentTarget });
   };
 
@@ -32,11 +32,9 @@ class MenuMobile extends React.Component {
       classes,
       data: {
         site: {
-          siteMetadata: {
-            menuLinks
-          }
-        }
-      }
+          siteMetadata: { menuLinks },
+        },
+      },
     } = this.props;
     return (
       <>
@@ -46,18 +44,18 @@ class MenuMobile extends React.Component {
         <ClickAwayListener onClickAway={this.handleClose}>
           <Menu
             anchorEl={anchorEl}
-            open={Boolean(anchorEl)}
             onClose={this.handleClose}
+            open={Boolean(anchorEl)}
           >
-            {menuLinks.map(link => (
+            {menuLinks.map((link) => (
               <Link key={link.name} to={link.link}>
                 <MenuItem>{link.name}</MenuItem>
               </Link>
             ))}
             <a
               href="https://github.com/bluepeter/gatsby-material-ui-business-starter"
-              target="_blank"
               rel="noopener noreferrer"
+              target="_blank"
             >
               <MenuItem>Fork me on Github</MenuItem>
             </a>
@@ -70,7 +68,7 @@ class MenuMobile extends React.Component {
 
 const StyledMenuMobile = withStyles(styles)(MenuMobile);
 
-export default props => (
+export default (props) => (
   <StaticQuery
     query={graphql`
       query MenuMobileQuery {
@@ -84,6 +82,6 @@ export default props => (
         }
       }
     `}
-    render={data => <StyledMenuMobile active={props.active} data={data} />}
+    render={(data) => <StyledMenuMobile active={props.active} data={data} />}
   />
 );

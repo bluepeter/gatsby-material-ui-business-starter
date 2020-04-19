@@ -11,39 +11,39 @@ import withStyles from "@material-ui/styles/withStyles";
 
 const styles = {
   paper: {
-    padding: "25px"
+    padding: "25px",
   },
   image: {
-    width: "100%"
-  }
+    width: "100%",
+  },
 };
 
 const Detail = ({ classes, data }) => {
   const {
-      title,
-      image: { publicURL },
-      jobtitle,
-    } = data.markdownRemark.frontmatter,
-    { html } = data.markdownRemark;
+    title,
+    image: { publicURL },
+    jobtitle,
+  } = data.markdownRemark.frontmatter;
+  const { html } = data.markdownRemark;
   return (
     <Page>
       <SEO title={title} />
       <Paper className={classes.paper}>
         <Grid
-          spacing={24}
+          alignItems="flex-start"
           container
           direction="row"
-          alignItems="flex-start"
           justify="center"
+          spacing={24}
         >
-          <Grid item xs={12} md={4}>
-            <img className={classes.image} src={withPrefix(publicURL)} alt="" />
+          <Grid item md={4} xs={12}>
+            <img alt="" className={classes.image} src={withPrefix(publicURL)} />
           </Grid>
-          <Grid item xs={12} md={8}>
-            <Typography gutterBottom variant="h2" component="h2">
+          <Grid item md={8} xs={12}>
+            <Typography component="h2" gutterBottom variant="h2">
               {title}
             </Typography>
-            <Typography gutterBottom variant="h5" component="h5">
+            <Typography component="h5" gutterBottom variant="h5">
               {jobtitle}
             </Typography>
             <Typography dangerouslySetInnerHTML={{ __html: html }} />

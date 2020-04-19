@@ -12,48 +12,48 @@ import Avatar from "@material-ui/core/Avatar";
 import { Gift } from "mdi-material-ui";
 import withStyles from "@material-ui/styles/withStyles";
 
-const styles = theme => ({
-    root: {
-      fontWeight: "bold",
-    },
-  }),
-  Home = props => {
-    const products = props.data.allMarkdownRemark.edges;
-    return (
-      <Page title="Gatsby Material UI Business Starter">
-        <SEO title="Home">
-          <meta
-            name="description"
-            content="Beautiful Gatsby Material UI Business Starter. Tiny code. Well organized. Ready to customize and go."
-          />
-        </SEO>
+const styles = () => ({
+  root: {
+    fontWeight: "bold",
+  },
+});
+const Home = (props) => {
+  const products = props.data.allMarkdownRemark.edges;
+  return (
+    <Page title="Gatsby Material UI Business Starter">
+      <SEO title="Home">
+        <meta
+          content="Beautiful Gatsby Material UI Business Starter. Tiny code. Well organized. Ready to customize and go."
+          name="description"
+        />
+      </SEO>
 
-        <HomeFeatures />
-        <Card
-          title="Our Products"
-          avatar={
-            <Avatar>
-              <Gift />
-            </Avatar>
-          }
-          action={
-            <Button
-              variant="contained"
-              color="secondary"
-              className={props.classes.root}
-              component={Link}
-              to="/products"
-            >
-              View All Products
-            </Button>
-          }
-          style={{ minHeight: 523 }}
-        >
-          <Carousel items={products} />
-        </Card>
-      </Page>
-    );
-  };
+      <HomeFeatures />
+      <Card
+        action={
+          <Button
+            className={props.classes.root}
+            color="secondary"
+            component={Link}
+            to="/products"
+            variant="contained"
+          >
+            View All Products
+          </Button>
+        }
+        avatar={
+          <Avatar>
+            <Gift />
+          </Avatar>
+        }
+        style={{ minHeight: 523 }}
+        title="Our Products"
+      >
+        <Carousel items={products} />
+      </Card>
+    </Page>
+  );
+};
 
 export const query = graphql`
   query {

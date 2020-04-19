@@ -1,7 +1,7 @@
 // See https://github.com/mui-org/material-ui/tree/master/examples/gatsby
 import { SheetsRegistry } from "jss";
 import { createMuiTheme } from "@material-ui/core/styles";
-import { createGenerateClassName } from '@material-ui/styles';
+import { createGenerateClassName } from "@material-ui/styles";
 import purple from "@material-ui/core/colors/purple";
 import green from "@material-ui/core/colors/green";
 

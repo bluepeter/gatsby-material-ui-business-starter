@@ -10,7 +10,7 @@ import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import { Rocket } from "mdi-material-ui";
 
-const Team = props => {
+const Team = (props) => {
   const teams = props.data.allMarkdownRemark.edges;
   return (
     <Page title="Meet the Team">
@@ -25,7 +25,7 @@ const Team = props => {
       </Typography>
 
       <GridList cellHeight={500} cols={3}>
-        {teams.map(edge => {
+        {teams.map((edge) => {
           const {
             node: {
               frontmatter: {
@@ -39,10 +39,8 @@ const Team = props => {
           return (
             <Link key={path} to={path}>
               <GridListTile cols={1}>
-                <img src={withPrefix(publicURL)} alt={title} />
+                <img alt={title} src={withPrefix(publicURL)} />
                 <GridListTileBar
-                  title={title}
-                  subtitle={jobtitle}
                   actionIcon={
                     <IconButton
                       className="teamIcon"
@@ -51,6 +49,8 @@ const Team = props => {
                       <Rocket />
                     </IconButton>
                   }
+                  subtitle={jobtitle}
+                  title={title}
                 />
               </GridListTile>
             </Link>

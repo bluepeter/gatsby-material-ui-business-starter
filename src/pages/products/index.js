@@ -5,7 +5,7 @@ import SEO from "../../components/SEO";
 import Page from "../../components/Page";
 import List from "../../components/List";
 
-const Products = props => {
+const Products = (props) => {
   const products = props.data.allMarkdownRemark.edges;
   return (
     <Page title="Products">

@@ -12,23 +12,26 @@ import withStyles from "@material-ui/styles/withStyles";
 
 const styles = {
   cardMedia: {
-    height: "200px"
-  }
+    height: "200px",
+  },
 };
 
 const Detail = ({ classes, data }) => {
   const {
-      title,
-      image: { publicURL },
-    } = data.markdownRemark.frontmatter,
-    { html } = data.markdownRemark;
+    title,
+    image: { publicURL },
+  } = data.markdownRemark.frontmatter;
+  const { html } = data.markdownRemark;
   return (
     <Page>
       <SEO title={title} />
       <Card>
-        <CardMedia className={classes.cardMedia} image={withPrefix(publicURL)} />
+        <CardMedia
+          className={classes.cardMedia}
+          image={withPrefix(publicURL)}
+        />
         <CardContent>
-          <Typography gutterBottom variant="h2" component="h2">
+          <Typography component="h2" gutterBottom variant="h2">
             {title}
           </Typography>
           <Typography dangerouslySetInnerHTML={{ __html: html }} />
