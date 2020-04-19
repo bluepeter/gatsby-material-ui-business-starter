@@ -1,6 +1,6 @@
 {
   "name": "gatsby-material-ui-business-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Peter Bray <peter@foxandgeese.com>",
   "description": "Beautiful Gatsby Material Design Business Starter",
   "license": "MIT",
@@ -12,8 +12,8 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.3",
-    "@material-ui/styles": "^3.0.0-alpha.10",
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/styles": "^4.9.10",
     "gatsby": "^2.3.6",
     "gatsby-plugin-react-helmet": "^3.0.11",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
@@ -21,13 +21,13 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
     "gh-pages": "^2.0.1",
-    "jss": "^9.8.7",
-    "mdi-material-ui": "^5.10.0",
+    "jss": "^10.1.1",
+    "mdi-material-ui": "^6.13.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "react-jss": "^8.6.1",
+    "react-helmet": "^6.0.0",
+    "react-jss": "^10.1.1",
     "react-swipeable-views": "^0.13.1",
     "react-swipeable-views-utils": "^0.13.1"
   }
