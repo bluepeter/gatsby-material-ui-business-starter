@@ -14,30 +14,30 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
   },
   "dependencies": {
-    "@material-ui/core": "4.9.11",
-    "@material-ui/styles": "4.9.10",
-    "gatsby": "2.20.25",
-    "gatsby-plugin-react-helmet": "3.2.4",
+    "@material-ui/core": "4.10.1",
+    "@material-ui/styles": "4.10.0",
+    "gatsby": "2.22.20",
+    "gatsby-plugin-react-helmet": "3.3.3",
     "gatsby-plugin-remove-serviceworker": "1.0.0",
-    "gatsby-plugin-stylus": "2.2.3",
-    "gatsby-source-filesystem": "2.2.4",
-    "gatsby-transformer-remark": "2.7.3",
-    "gh-pages": "2.2.0",
-    "jss": "10.1.1",
-    "mdi-material-ui": "6.13.2",
+    "gatsby-plugin-stylus": "2.3.3",
+    "gatsby-source-filesystem": "2.3.10",
+    "gatsby-transformer-remark": "2.8.14",
+    "gh-pages": "3.0.0",
+    "jss": "10.2.0",
+    "mdi-material-ui": "6.16.0",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "6.0.0",
-    "react-jss": "10.1.1",
+    "react-jss": "10.2.0",
     "react-swipeable-views": "0.13.9",
     "react-swipeable-views-utils": "0.13.9"
   },
   "devDependencies": {
     "babel-eslint": "10.1.0",
-    "eslint": "6.8.0",
-    "eslint-plugin-react": "7.19.0",
-    "eslint-plugin-react-hooks": "3.0.0",
-    "prettier": "2.0.4"
+    "eslint": "7.1.0",
+    "eslint-plugin-react": "7.20.0",
+    "eslint-plugin-react-hooks": "4.0.4",
+    "prettier": "2.0.5"
   }
 }
