@@ -12,7 +12,7 @@ import Chip from "@material-ui/core/Chip";
 import Avatar from "@material-ui/core/Avatar";
 import { MaterialUi } from "mdi-material-ui";
 
-const Header = (props) => {
+const Header = props => {
   return (
     <AppBar id="appBar">
       <Toolbar>
@@ -65,6 +65,6 @@ export default () => (
         }
       }
     `}
-    render={(data) => <Header data={data} />}
+    render={data => <Header data={data} />}
   />
 );

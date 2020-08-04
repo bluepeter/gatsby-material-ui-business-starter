@@ -18,7 +18,7 @@ class MenuMobile extends React.Component {
     anchorEl: null,
   };
 
-  handleOpen = (event) => {
+  handleOpen = event => {
     this.setState({ anchorEl: event.currentTarget });
   };
 
@@ -47,7 +47,7 @@ class MenuMobile extends React.Component {
             onClose={this.handleClose}
             open={Boolean(anchorEl)}
           >
-            {menuLinks.map((link) => (
+            {menuLinks.map(link => (
               <Link key={link.name} to={link.link}>
                 <MenuItem>{link.name}</MenuItem>
               </Link>
@@ -68,7 +68,7 @@ class MenuMobile extends React.Component {
 
 const StyledMenuMobile = withStyles(styles)(MenuMobile);
 
-export default (props) => (
+export default props => (
   <StaticQuery
     query={graphql`
       query MenuMobileQuery {
@@ -82,6 +82,6 @@ export default (props) => (
         }
       }
     `}
-    render={(data) => <StyledMenuMobile active={props.active} data={data} />}
+    render={data => <StyledMenuMobile active={props.active} data={data} />}
   />
 );

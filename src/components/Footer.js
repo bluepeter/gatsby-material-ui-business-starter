@@ -5,7 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Hidden from "@material-ui/core/Hidden";
 import withStyles from "@material-ui/styles/withStyles";
 
-const styles = (theme) => ({
+const styles = theme => ({
   divider: {
     marginTop: theme.spacing(6),
     marginBottom: theme.spacing(3),
@@ -16,7 +16,7 @@ const styles = (theme) => ({
   },
 });
 
-const Footer = withStyles(styles)((props) => {
+const Footer = withStyles(styles)(props => {
   const {
     classes,
     data: {
@@ -67,6 +67,6 @@ export default () => (
         }
       }
     `}
-    render={(data) => <Footer data={data} />}
+    render={data => <Footer data={data} />}
   />
 );

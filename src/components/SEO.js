@@ -2,10 +2,10 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
 
-const SEO = (props) => (
+const SEO = props => (
   <StaticQuery
     query={detailsQuery}
-    render={(data) => {
+    render={data => {
       const title = props.title || data.site.siteMetadata.title;
       return (
         <Helmet

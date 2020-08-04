@@ -25,18 +25,18 @@ class Carousel extends React.Component {
   };
 
   handleNext = () => {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       activeStep: prevState.activeStep + 1,
     }));
   };
 
   handleBack = () => {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       activeStep: prevState.activeStep - 1,
     }));
   };
 
-  handleStepChange = (activeStep) => {
+  handleStepChange = activeStep => {
     this.setState({ activeStep });
   };
 

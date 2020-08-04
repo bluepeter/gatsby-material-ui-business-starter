@@ -10,7 +10,7 @@ import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import { Rocket } from "mdi-material-ui";
 
-const Team = (props) => {
+const Team = props => {
   const teams = props.data.allMarkdownRemark.edges;
   return (
     <Page title="Meet the Team">
@@ -25,7 +25,7 @@ const Team = (props) => {
       </Typography>
 
       <GridList cellHeight={500} cols={3}>
-        {teams.map((edge) => {
+        {teams.map(edge => {
           const {
             node: {
               frontmatter: {

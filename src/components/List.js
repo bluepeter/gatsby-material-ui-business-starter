@@ -14,7 +14,7 @@ const styles = {
   },
 };
 
-const List = (props) => {
+const List = props => {
   const { classes } = props;
   return (
     <Grid
@@ -24,7 +24,7 @@ const List = (props) => {
       justify="center"
       spacing={8}
     >
-      {props.items.map((edge) => {
+      {props.items.map(edge => {
         const {
           node: {
             excerpt,

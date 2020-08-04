@@ -1,7 +1,6 @@
 import withRoot from "../utils/withRoot";
 import React from "react";
 import { graphql, Link } from "gatsby";
-import PropTypes from "prop-types";
 import SEO from "../components/SEO";
 import Card from "../components/Card";
 import Page from "../components/Page";
@@ -17,7 +16,7 @@ const styles = () => ({
     fontWeight: "bold",
   },
 });
-const Home = (props) => {
+const Home = props => {
   const products = props.data.allMarkdownRemark.edges;
   return (
     <Page title="Gatsby Material UI Business Starter">
@@ -85,9 +84,5 @@ export const query = graphql`
     }
   }
 `;
-
-Home.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
 export default withRoot(withStyles(styles)(Home));
